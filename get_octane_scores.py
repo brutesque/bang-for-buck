@@ -54,7 +54,7 @@ def scrapeOctanebenchResults():
 	return results
 
 def save_results(data):
-	conn = sqlite3.connect('octane_tweakers.db')
+	conn = sqlite3.connect('dist/octane_tweakers.db')
 	c = conn.cursor()
 
 

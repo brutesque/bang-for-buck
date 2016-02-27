@@ -5,7 +5,7 @@ requiredMemory = 4096 # MB gpu memory
 rating = 4 # amount of stars on tweakers.net (0-5)
 
 def read_from_db():
-	conn = sqlite3.connect('octane_tweakers.db')
+	conn = sqlite3.connect('dist/octane_tweakers.db')
 	c = conn.cursor()
 
 	c.execute("SELECT chipset, multiGpu, nGpuUsed, nResults, score FROM octaneScores")
@@ -96,7 +96,7 @@ def getPriceOffers(keywords, minMemory=4096):
 	return results
 
 def save_results(data):
-	conn = sqlite3.connect('octane_tweakers.db')
+	conn = sqlite3.connect('dist/octane_tweakers.db')
 	c = conn.cursor()
 
 	c.execute("CREATE TABLE IF NOT EXISTS gpuPrices(chipset TEXT, price REAL, url TEXT, score INT, pricePerPoint REAL, name TEXT, spec TEXT)")

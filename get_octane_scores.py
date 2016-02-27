@@ -1,8 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-from pprint import pprint
-import re
-import time
 import sqlite3
 
 def scrapeOctanebenchResults():
@@ -66,7 +63,6 @@ def save_results(data):
 	c.execute("DELETE FROM octaneScores")
 
 	for key, value in data.items():
-		pprint(value)
 		c.execute("INSERT INTO octaneScores (chipset, multiGpu, nGpuUsed, nResults, score) VALUES (?, ?, ?, ?, ?)", (value['chipset'], value['multiGpu'], value['nGpuUsed'], value['nResults'], value['score']))
 
 	conn.commit()
@@ -76,10 +72,5 @@ def save_results(data):
 
 
 if __name__ == "__main__":
-	stopwatch = time.time()
-	from pprint import pprint
 	octanebenchResults = scrapeOctanebenchResults()
 	save_results(octanebenchResults)
-#	pprint(octanebenchResults)
-	print time.time() - stopwatch
-	

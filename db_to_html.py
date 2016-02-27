@@ -27,7 +27,7 @@ for (key, row) in data.items():
 			row['score'],
 			'&euro; %s' % row['price'],
 			'&euro; %s' % row['pricePerPoint'],
-			'<a href="%s">%s</a>' % (row['url'], row['name']),
+			'<a href="%s" target="_blank">%s</a>' % (row['url'], row['name']),
 			row['spec']
 		)
 	)

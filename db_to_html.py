@@ -22,14 +22,16 @@ data = read_from_db()
 
 table = ''
 for (key, row) in data.items():
-	table += '<tr>' + ('<td>%s</td>'*6) % (
-		row['chipset'],
-		row['score'],
-		row['price'],
-		row['pricePerPoint'],
-		'<a href="%s">%s</a>' % (row['url'], row['name']),
-		row['spec']
-	) + '</tr>'
+	table += '<tr>%s</tr>' % (
+		('<td>%s</td>'*6) % (
+			row['chipset'],
+			row['score'],
+			row['price'],
+			row['pricePerPoint'],
+			'<a href="%s">%s</a>' % (row['url'], row['name']),
+			row['spec']
+		)
+	)
 
 with open('template.html', 'r') as infile:
 	template = infile.read()

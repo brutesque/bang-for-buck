@@ -1,4 +1,4 @@
-import sqlite3
+import sqlite3, datetime
 
 def read_from_db():
 	conn = sqlite3.connect('site/octane_tweakers.db')
@@ -35,5 +35,11 @@ for (key, row) in data.items():
 with open('template.html', 'r') as infile:
 	template = infile.read()
 
-	outfile.write(template%table)
+timestamp = str(datetime.datetime.now()).split('.')[0]
+newHtml = template % (
+	timestamp,
+	table
+)
+
 with open('site/index.html', 'w') as outfile:
+	outfile.write(newHtml)

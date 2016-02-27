@@ -1,9 +1,6 @@
 import requests, time, sqlite3
 from bs4 import BeautifulSoup
 
-requiredMemory = 4096 # MB gpu memory
-rating = 4 # amount of stars on tweakers.net (0-5)
-
 def read_from_db():
 	conn = sqlite3.connect('dist/octane_tweakers.db')
 	c = conn.cursor()

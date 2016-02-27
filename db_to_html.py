@@ -25,8 +25,8 @@ for (key, row) in data.items():
 		('<td>%s</td>'*6) % (
 			row['chipset'],
 			row['score'],
-			row['price'],
-			row['pricePerPoint'],
+			'&euro; %s' % row['price'],
+			'&euro; %s' % row['pricePerPoint'],
 			'<a href="%s">%s</a>' % (row['url'], row['name']),
 			row['spec']
 		)

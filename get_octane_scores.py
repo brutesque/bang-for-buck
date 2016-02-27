@@ -1,6 +1,5 @@
-import requests
+import requests, sqlite3
 from bs4 import BeautifulSoup
-import sqlite3
 
 def scrapeOctanebenchResults():
 	"""

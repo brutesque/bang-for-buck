@@ -5,7 +5,7 @@ def read_from_db():
 	conn = sqlite3.connect('dist/octane_tweakers.db')
 	c = conn.cursor()
 
-	c.execute("SELECT chipset, price, url, score, pricePerPoint, name, spec FROM gpuPrices")
+	c.execute("SELECT chipset, price, url, score, pricePerPoint, name, spec FROM gpuPrices ORDER BY pricePerPoint")
 
 	data = {}
 	i = 0

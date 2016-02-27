@@ -17,7 +17,7 @@ python db_to_html.py
 # Update git repository and push to gh-pages.
 #------------------------------------------------------------------------------
 
-###
+### git push origin `git subtree split --prefix site master 2> /dev/null`:gh-pages --force
 
 
 # Finished.

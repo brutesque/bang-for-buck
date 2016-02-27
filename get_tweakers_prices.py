@@ -1,10 +1,5 @@
-import requests
+import requests, time, sqlite3
 from bs4 import BeautifulSoup
-from pprint import pprint
-import re
-import time
-import sqlite3
-
 
 requiredMemory = 4096 # MB gpu memory
 rating = 4 # amount of stars on tweakers.net (0-5)
@@ -139,7 +134,6 @@ def collectOffers(octanebenchResults, keywords=None):
 
 		for j, priceOffer in priceOffers.items():
 			pricePerPoint = None
-			print priceOffer['price'], priceOffer['url'], priceOffer['name'], priceOffer['spec']
 			pricePerPoint = priceOffer['price'] / value['score']
 
 			gpus[i] = {
@@ -155,10 +149,7 @@ def collectOffers(octanebenchResults, keywords=None):
 	return gpus
 
 if __name__ == "__main__":
-	stopwatch = time.time()
-	from pprint import pprint
 	octanebenchResults = read_from_db()
 	gpuPrices = collectOffers(octanebenchResults)
 	save_results(gpuPrices)
-	print time.time() - stopwatch
 	

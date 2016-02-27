@@ -42,7 +42,6 @@ def getPriceOffers(keywords, minMemory=4096):
 	# The following delay is added on purpose to prevent spamming the site we're scraping data from. It's best to leave it in.
 	delay = 10
 	time.sleep( delay - ( time.time() % delay ) )
-	print time.time(), 'Getting prices for "%s"' % keywords
 
 	r = requests.get(url, params=payload, headers={'user-agent': 'curl/7.7.2 (powerpc-apple-darwin6.0) libcurl 7.7.2 (OpenSSL 0.9.6b)'})
 	if r.status_code != 200:

@@ -2,7 +2,7 @@ import sqlite3
 from pprint import pprint
 
 def read_from_db():
-	conn = sqlite3.connect('dist/octane_tweakers.db')
+	conn = sqlite3.connect('site/octane_tweakers.db')
 	c = conn.cursor()
 
 	c.execute("SELECT chipset, price, url, score, pricePerPoint, name, spec FROM gpuPrices ORDER BY pricePerPoint")
@@ -36,5 +36,5 @@ for (key, row) in data.items():
 with open('template.html', 'r') as infile:
 	template = infile.read()
 
-with open('dist/index.html', 'w') as outfile:
 	outfile.write(template%table)
+with open('site/index.html', 'w') as outfile:

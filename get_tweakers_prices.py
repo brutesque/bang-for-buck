@@ -2,7 +2,7 @@ import requests, time, sqlite3
 from bs4 import BeautifulSoup
 
 def read_from_db():
-	conn = sqlite3.connect('dist/octane_tweakers.db')
+	conn = sqlite3.connect('site/octane_tweakers.db')
 	c = conn.cursor()
 
 	c.execute("SELECT chipset, multiGpu, nGpuUsed, nResults, score FROM octaneScores")
@@ -93,7 +93,7 @@ def getPriceOffers(keywords, minMemory=4096):
 	return results
 
 def save_results(data):
-	conn = sqlite3.connect('dist/octane_tweakers.db')
+	conn = sqlite3.connect('site/octane_tweakers.db')
 	c = conn.cursor()
 
 	c.execute("CREATE TABLE IF NOT EXISTS gpuPrices(chipset TEXT, price REAL, url TEXT, score INT, pricePerPoint REAL, name TEXT, spec TEXT)")

@@ -1,7 +1,7 @@
 import sqlite3, datetime
 
 def read_from_db():
-	conn = sqlite3.connect('site/octane_tweakers.db')
+	conn = sqlite3.connect('/tmp/octane_tweakers.db')
 	c = conn.cursor()
 
 	c.execute("SELECT chipset, price, url, score, pricePerPoint, name, spec FROM gpuPrices ORDER BY pricePerPoint")
@@ -41,5 +41,5 @@ newHtml = template % (
 	table
 )
 
-with open('site/index.html', 'w') as outfile:
+with open('/tmp/octane_tweakers.html', 'w') as outfile:
 	outfile.write(newHtml)

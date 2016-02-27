@@ -1,5 +1,4 @@
 import sqlite3
-from pprint import pprint
 
 def read_from_db():
 	conn = sqlite3.connect('site/octane_tweakers.db')

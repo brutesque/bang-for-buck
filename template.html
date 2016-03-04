@@ -7,11 +7,9 @@
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 		<meta name="description" content="">
 		<meta name="author" content="">
-		<link rel="icon" href="../../favicon.ico">
-
 		<title>Knal per Knaak</title>
 
-		<!-- Bootstrap core CSS -->
+		<!-- Bootstrap -->
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 	    <!-- Bootstrap sortable -->
@@ -26,16 +24,21 @@
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 	</head>
-
 	<body>
-
+		<div class="jumbotron">
+			<div class="container">
+				<div class="page-header">
+					<h1>Knal per Knaak <small>OctaneBench vs GPU prices</small></h1>
+				</div>
+				<p>The data below is a combination of <a href="http://render.otoy.com/octanebench/results.php">OctaneBench scores</a> and corresponding <a href="http://tweakers.net/categorie/49/videokaarten/producten/">GPU prices</a>.</p>
+				<p class="lead">Updated daily. Last update: %s (UTC+1)</p>
+			</div>
+		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 col-md-12 main">
-					<h1 class="page-header">Knal per Knaak</h1>
-					<p>Last update: %s (UTC+1)</p>
 					<div class="table-responsive">
-						<table class="table table-striped sortable">
+						<table class="table table-hover table-responsive sortable">
 							<thead>
 								<tr>
 									<th>Chipset</th>
@@ -61,6 +64,7 @@
 		</footer>
 
 		<!-- Placed at the end of the document so the pages load faster -->
+		<!-- jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 		<script src='js/moment.min.js'></script>

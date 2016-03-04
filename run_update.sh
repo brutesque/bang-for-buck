@@ -9,8 +9,8 @@ set -e
 # Collect data.
 #------------------------------------------------------------------------------
 
-#python get_octane_scores.py
-#python get_tweakers_prices.py
+python get_octane_scores.py
+python get_tweakers_prices.py
 python db_to_html.py
 
 

@@ -52,7 +52,7 @@ def getPriceOffers(keywords, minMemory=4096):
 	#	Extract results from html code
 	#
 
-	soup = BeautifulSoup(r.content)
+	soup = BeautifulSoup(r.content, "html.parser")
 	listing = soup.find('table', {'class': 'listing'})
 
 	results = {}

@@ -22,7 +22,7 @@ def scrapeOctanebenchResults():
 	#	Extract results from html code
 	#
 
-	soup = BeautifulSoup(r.content)
+	soup = BeautifulSoup(r.content, "html.parser")
 
 	# Check to see if there is a div with class 'mainResultDisplay'
 	mainResultDisplay = soup.find('div',{'class': 'mainResultDisplay'})

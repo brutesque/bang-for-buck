@@ -19,6 +19,7 @@ python db_to_html.py
 
 git checkout gh-pages
 mv /tmp/octane_tweakers.html ./index.html
+mv /tmp/octane_tweakers.db ./octane_tweakers.db
 git commit -am "automated update"
 git push
 git checkout master

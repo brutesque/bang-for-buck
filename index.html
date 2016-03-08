@@ -7,7 +7,7 @@
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 		<meta name="description" content="">
 		<meta name="author" content="">
-		<title>Knal per Knaak</title>
+		<title>Bang for Buck</title>
 
 		<!-- Bootstrap -->
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -28,10 +28,13 @@
 		<div class="jumbotron">
 			<div class="container">
 				<div class="page-header">
-					<h1>Knal per Knaak <small>OctaneBench vs GPU prices</small></h1>
+					<h1>Bang for Buck <small>OctaneBench vs price</small></h1>
 				</div>
-				<p>The data below is a combination of <a href="http://render.otoy.com/octanebench/results.php">OctaneBench scores</a> and corresponding <a href="http://tweakers.net/categorie/49/videokaarten/producten/">GPU prices</a>.</p>
-				<p class="lead">Updated daily. Last update: 2016-03-08 05:15:51 (UTC+1)</p>
+				<p>Gpu price/performance comparison for Otoy's OctaneRender.</p>
+				<p>The benchmark scores are collected from <a href="http://render.otoy.com/octanebench/results.php" target="_blank">OctaneBench Results</a> and combined with prices from <a href="http://tweakers.net/categorie/49/videokaarten/producten/" target="_blank">Tweakers.net PriceWatch</a>.</p>
+				<small>Updated daily. Last update: 2016-03-08 06:34:06 (UTC+1)</small>
+				<br/><br/>
+				<button type="button" class="btn btn-success btn-xs" data-placement="right" data-toggle="popover" data-html="true" data-title="Bitcoin donation address" data-content='<a href="bitcoin:1GC2UzVR7mFPhN3nW15zLF91wNZ9qi9Sc3"><img src="https://blockchain.info/qr?data=1GC2UzVR7mFPhN3nW15zLF91wNZ9qi9Sc3&size=250" alt="bitcoin:1GC2UzVR7mFPhN3nW15zLF91wNZ9qi9Sc3" style="width: 250px; height: 250px;" width="250" height="250" class="img-responsive"></a><div class="caption"><a href="bitcoin:1GC2UzVR7mFPhN3nW15zLF91wNZ9qi9Sc3"><small>1GC2UzVR7mFPhN3nW15zLF91wNZ9qi9Sc3</small><br/><a href="https://www.bitcoin.org"><small>What is bitcoin?</small></div>'><span class="glyphicon glyphicon-bitcoin" aria-hidden="true"></span> Donate</button>
 			</div>
 		</div>
 		<div class="container">
@@ -57,6 +60,11 @@
 				</div>
 			</div>
 		</div>
+		<footer class="footer">
+			<div class="container">
+				<p class="text-muted text-center">By <a href="http://www.brutesque.com" target="_blank">Brutesque</a></p>
+			</div>
+		</footer>
 
 		<!-- Placed at the end of the document so the pages load faster -->
 		<!-- jQuery -->
@@ -64,5 +72,10 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 		<script src='js/moment.min.js'></script>
 		<script src='js/bootstrap-sortable.js'></script>
+		<script>
+		$(function () {
+		  $('[data-toggle="popover"]').popover()
+		})
+		</script>
 	</body>
 </html>

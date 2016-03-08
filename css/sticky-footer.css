@@ -16,3 +16,15 @@ body {
   height: 60px;
   background-color: #f5f5f5;
 }
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+
+.container {
+  padding: 0 15px;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+

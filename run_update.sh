@@ -21,8 +21,8 @@ python db_to_html.py
 # Update git repository and push to gh-pages.
 #------------------------------------------------------------------------------
 
-mv /octane_tweakers.hml /tmp/
-mv /octane_tweakers.db /tmp/
+mv octane_tweakers.html /tmp/
+mv octane_tweakers.db /tmp/
 git checkout gh-pages
 mv /tmp/octane_tweakers.html ./index.html
 mv /tmp/octane_tweakers.db ./

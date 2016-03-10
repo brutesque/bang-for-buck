@@ -21,9 +21,11 @@ python db_to_html.py
 # Update git repository and push to gh-pages.
 #------------------------------------------------------------------------------
 
+mv /octane_tweakers.hml /tmp/
+mv /octane_tweakers.db /tmp/
 git checkout gh-pages
 mv /tmp/octane_tweakers.html ./index.html
-mv /tmp/octane_tweakers.db ./octane_tweakers.db
+mv /tmp/octane_tweakers.db ./
 git commit -am "automated update"
 git push
 git checkout master

@@ -1,7 +1,7 @@
 import sqlite3, datetime
 
 def read_from_db():
-	conn = sqlite3.connect('/tmp/octane_tweakers.db')
+	conn = sqlite3.connect('octane_tweakers.db')
 	c = conn.cursor()
 
 	c.execute("SELECT chipset, price, url, score, pricePerPoint, name, spec FROM gpuPrices ORDER BY pricePerPoint")
@@ -21,16 +21,17 @@ data = read_from_db()
 
 table = ''
 for (key, row) in data.items():
-	table += '<tr>%s</tr>' % (
-		('<td>%s</td>'*6) % (
-			row['chipset'],
-			row['score'],
-			'&euro;&nbsp;%s' % row['price'],
-			'&euro;&nbsp;%s' % row['pricePerPoint'],
-			'<a href="%s" target="_blank">%s</a>' % (row['url'], row['name']),
-			row['spec']
+	if not row['price'] == None:
+		table += '<tr>%s</tr>' % (
+			('<td>%s</td>'*6) % (
+				row['chipset'],
+				row['score'],
+				'&euro;&nbsp;%s' % row['price'],
+				'&euro;&nbsp;%s' % row['pricePerPoint'],
+				'<a href="%s" target="_blank">%s</a>' % (row['url'], row['name']),
+				row['spec']
+			)
 		)
-	)
 
 with open('template.html', 'r') as infile:
 	template = infile.read()
@@ -41,5 +42,5 @@ newHtml = template % (
 	table
 )
 
-with open('/tmp/octane_tweakers.html', 'w') as outfile:
+with open('octane_tweakers.html', 'w') as outfile:
 	outfile.write(newHtml)

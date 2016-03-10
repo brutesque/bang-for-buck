@@ -27,7 +27,7 @@ for (key, row) in data.items():
 				row['chipset'],
 				row['score'],
 				'&euro;&nbsp;%s' % row['price'],
-				'&euro;&nbsp;%s' % row['pricePerPoint'],
+				'&euro;&nbsp;%s' % round(row['pricePerPoint'], 5),
 				'<a href="%s" target="_blank">%s</a>' % (row['url'], row['name']),
 				row['spec']
 			)
